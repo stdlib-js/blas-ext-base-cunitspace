@@ -35,32 +35,14 @@ limitations under the License.
 
 > Fill a single-precision complex floating-point strided array with linearly spaced numeric elements which increment by `1` starting from a specified value.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-ext-base-cunitspace
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var cunitspace = require( '@stdlib/blas-ext-base-cunitspace' );
+import cunitspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-cunitspace@esm/index.mjs';
 ```
 
 #### cunitspace( N, start, x, strideX )
@@ -68,8 +50,8 @@ var cunitspace = require( '@stdlib/blas-ext-base-cunitspace' );
 Fills a single-precision complex floating-point strided array with linearly spaced numeric elements which increment by `1` starting from a specified value.
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex64Array = require( '@stdlib/array-complex64' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 
 var x = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
@@ -89,8 +71,8 @@ The `N` and stride parameters determine which elements in the strided array are 
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex64Array = require( '@stdlib/array-complex64' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
 
@@ -103,8 +85,8 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex64Array = require( '@stdlib/array-complex64' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 
 // Initial array...
 var x0 = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
@@ -122,8 +104,8 @@ cunitspace( 3, new Complex64( 3.0, 0.0 ), x1, 2 );
 Fills a single-precision complex floating-point strided array with linearly spaced numeric elements which increment by `1` starting from a specified value using alternative indexing semantics.
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex64Array = require( '@stdlib/array-complex64' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 
 var x = new Complex64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
@@ -140,8 +122,8 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var Complex64Array = require( '@stdlib/array-complex64' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
 
 var x = new Complex64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0 ] );
 
@@ -169,11 +151,16 @@ cunitspace.ndarray( 3, new Complex64( 3.0, 0.0 ), x, 1, x.length-3 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var Complex64Array = require( '@stdlib/array-complex64' );
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var cunitspace = require( '@stdlib/blas-ext-base-cunitspace' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
+import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@esm/index.mjs';
+import cunitspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-cunitspace@esm/index.mjs';
 
 var xbuf = discreteUniform( 20, -100, 100, {
     'dtype': 'float32'
@@ -183,6 +170,10 @@ console.log( x );
 
 cunitspace( x.length, new Complex64( 3.0, 0.0 ), x, 1 );
 console.log( x );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -191,134 +182,7 @@ console.log( x );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/ext/base/cunitspace.h"
-```
-
-#### stdlib_strided_cunitspace( N, start, \*X, strideX )
-
-Fills a single-precision complex floating-point strided array with linearly spaced numeric elements which increment by `1` starting from a specified value.
-
-```c
-#include "stdlib/complex/float32/ctor.h"
-
-float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f };
-
-const stdlib_complex64_t start = stdlib_complex64( 3.0f, 0.0f );
-
-stdlib_strided_cunitspace( 4, start, (stdlib_complex64_t *)x, 1 );
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **start**: `[in] stdlib_complex64_t` starting value.
--   **X**: `[out] stdlib_complex64_t*` input array.
--   **strideX**: `[in] CBLAS_INT` stride length.
-
-```c
-void API_SUFFIX(stdlib_strided_cunitspace)( const CBLAS_INT N, const stdlib_complex64_t start, stdlib_complex64_t *X, const CBLAS_INT strideX );
-```
-
-#### stdlib_strided_cunitspace_ndarray( N, start, \*X, strideX, offsetX )
-
-Fills a single-precision complex floating-point strided array with linearly spaced numeric elements which increment by `1` starting from a specified value using alternative indexing semantics.
-
-```c
-#include "stdlib/complex/float32/ctor.h"
-
-float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f };
-
-const stdlib_complex64_t start = stdlib_complex64( 3.0f, 0.0f );
-
-stdlib_strided_cunitspace_ndarray( 4, start, (stdlib_complex64_t *)x, 1, 0 );
-```
-
-The function accepts the following arguments:
-
--   **N**: `[in] CBLAS_INT` number of indexed elements.
--   **start**: `[in] stdlib_complex64_t` starting value.
--   **X**: `[out] stdlib_complex64_t*` input array.
--   **strideX**: `[in] CBLAS_INT` stride length.
--   **offsetX**: `[in] CBLAS_INT` starting index.
-
-```c
-void API_SUFFIX(stdlib_strided_cunitspace_ndarray)( const CBLAS_INT N, const stdlib_complex64_t start, stdlib_complex64_t *X, const CBLAS_INT strideX, const CBLAS_INT offsetX );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/ext/base/cunitspace.h"
-#include "stdlib/complex/float32/ctor.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Create a strided array of interleaved real and imaginary components:
-    float x[] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f };
-
-    // Specify the number of elements:
-    const int N = 4;
-
-    // Specify a stride:
-    const int strideX = 1;
-
-    // Specify a starting value:
-    const stdlib_complex64_t start = stdlib_complex64( 3.0f, 0.0f );
-
-    // Fill the array:
-    stdlib_strided_cunitspace( N, start, (stdlib_complex64_t *)x, strideX );
-
-    // Print the result:
-    for ( int i = 0; i < 8; i++ ) {
-        printf( "x[ %i ] = %f\n", i, x[ i ] );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -337,7 +201,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -400,9 +264,9 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-cunitspace/main/LICENSE
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/esm
 
-[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor
+[@stdlib/complex/float32/ctor]: https://github.com/stdlib-js/complex-float32-ctor/tree/esm
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
